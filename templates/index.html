@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>página inicial</title>
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
 </head>
 <body>
-<<<<<<< HEAD:templates/index.html
     <header>
-        
+        <nav class="nav-header">
+            <img src="{{url_for('static', filename='imgs/logo.jpg')}}">
+            <div class="botoes-header">
+                <div><p>Login</p></div>
+                <div><p>Cadastre-se</p></div>
+            </div>
+        </nav>
     </header>
-    <main></main>
+
+    <main>
+        
+    </main>
     <footer></footer>
-=======
-    <H2>"HI GIRLS"</H2>
->>>>>>> 3dc7c97c59dd6ce0fc449f2093d5c721ee513e6d:index.html
+
 </body>
 </html>

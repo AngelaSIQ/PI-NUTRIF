@@ -1,0 +1,10 @@
+.nav-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.botoes-header{
+    display: flex;
+    flex-direction: row;
+    border-color: solid 1px #53B160;
+}
