@@ -33,9 +33,9 @@ def receitas():
     return render_template('receitas.html') 
 
 #contatos
-@app.     
-
-
+@app.route('/contatos')
+def contato():
+    return render_template('contatos.html')    
 
 
 if __name__ = "__main__"    

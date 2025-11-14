@@ -11,16 +11,47 @@
         <nav class="nav-header">
             <img src="{{url_for('static', filename='imgs/logo.jpg')}}">
             <div class="botoes-header">
-                <div><p>Login</p></div>
-                <div><p>Cadastre-se</p></div>
+                <div><a>login</a></div>
+                <div><a>cadastre-se</a></div>
             </div>
         </nav>
     </header>
 
     <main>
-        
+        <section>
+            <div>
+                <div><p>Nutrif é um projeto pensado para você estudante da rede federal, nosso projeto busca a melhoria da sua alimentação no campus, também ajudando os servidores na organização para instituição, tornando  nosso Campus um lugar melhor!</p></div>
+                <div>
+                    <div><a>receitas</a></div>
+                    <div><a>cardapio</a></div>
+                </div>
+            </div>
+
+            <img src="{{url_for('static', filename='imgs/criancas.jpg')}}">
+        </section>
+
+        <section>
+            <div>
+                <img src="{{url_for('static', filename='imgs/criancas.jpg')}}">
+                <img src="{{url_for('static', filename='imgs/criancas.jpg')}}">
+                <img src="{{url_for('static', filename='imgs/criancas.jpg')}}">
+            </div>
+        </section>
     </main>
-    <footer></footer>
+
+    <footer>
+        <div class="conteudo-central-rodapé">
+            <div>
+                <a>Inicio</a>
+                <a>Sobre nós</a>
+                <a>Ajuda</a>
+            </div>
+            <hr>
+            <p>© 2025 Nutrif.</p>
+        </div>
+        
+        <img src="{{url_for('static', filename='imgs/logo.jpg')}}">
+    </footer>
 
 </body>
 </html>
