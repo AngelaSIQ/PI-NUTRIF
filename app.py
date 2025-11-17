@@ -1,4 +1,4 @@
-from flask import flask, render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -38,6 +38,6 @@ def contato():
     return render_template('contatos.html')    
 
 
-if __name__ = "__main__"    
-    app.run
+if __name__ == "__main__":    
+    app.run()
 

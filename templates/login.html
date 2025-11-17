@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-header">
+            <img src="{{ url_for('static', filename='imgs/logo.png') }}"/>
+        </nav>
+
+        <main> 
+            <div> <h1>Login</h1></div>
+            <form action="" method="post">
+                <!-- Elementos do formulário vão aqui -->
+                <label for="Matricula">Matricula do SUAP::</label>
+                <input type="text" id="Matricula:" name="nome">
+
+                <label for="Senha">Senha do SUAP::</label>
+                <input type="text" id="Senha" name="nome">
+
+                <div class="botoes-conteudo">
+                <button>Enviar</button>
+
+                </div>
+        </main>
+
+    </header>
+</body>
+</html>
