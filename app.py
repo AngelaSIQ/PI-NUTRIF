@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -13,8 +13,8 @@ def login():
     return render_template('login.html')   
 
 #cadastro
-@app.route('/cadastro/<usuario>')
-def cadastro(usuario):
+@app.route('/cadastro')
+def cadastro():
     return render_template('cadastro.html') 
 
 #cardápio   
@@ -23,14 +23,29 @@ def cardapio():
     return render_template('cardapio.html')
 
 #feedback
-@app.route('/feedback')
+@app.route("/feedback", methods=["GET", "POST"])
 def feedback():
-    return render_template('feedback.html')   
+    if request.method == "POST":
+        msg = request.form["mensagem"]
+        palavras = msg.split()
+
+        return render_template(
+            "feedback_resultado.html",
+            mensagem=msg,
+            palavras=palavras
+        )
+
+    return render_template("feedback.html")
+
 
 #receitas
-@app.route('/receitas/<prato>')
+@app.route('/receitas')
 def receitas():
     return render_template('receitas.html') 
+
+@app.route('/prato')
+def prato():
+    return render_template('prato.html') 
 
 #contatos
 @app.route('/contatos')

@@ -8,25 +8,42 @@
 <body>
     <header>
         <nav class="nav-header">
-            <img src="{{ url_for('static', filename='imgs/logo.png') }}"/>
+            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
         </nav>
 
-        <main> 
+<hr>
+        <main>
             <div> <h1>Login</h1></div>
             <form action="" method="post">
                 <!-- Elementos do formulário vão aqui -->
                 <label for="Matricula">Matricula do SUAP::</label>
                 <input type="text" id="Matricula:" name="nome">
 
+
                 <label for="Senha">Senha do SUAP::</label>
                 <input type="text" id="Senha" name="nome">
+
 
                 <div class="botoes-conteudo">
                 <button>Enviar</button>
 
+
                 </div>
         </main>
+        <img src="{{ url_for('static', filename='imgs/salada.png') }}"/>
+
 
     </header>
+    <footer>
+        <div>
+            <p>Inicio</p>
+            <p> Sobre nós </p>
+            <p>Ajuda</p>
+            <p>© 2025 Nutrif.</p>
+             <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
+        </div>
+    </footer>
+
 </body>
 </html>
+

@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        {% block titulo %}
-
-        {% endblock %}
-
-    </title>
+    <title></title>
 </head>
 <body>
-    <nav> </nav>
-     {% block conteudo %}
 
-     {% endblock %}
-     <footer>
+    <header>
+       <nav class="nav-header">
+            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
+            <p>HOME</p>
+            <p>FEEDBACK</p>
+            <p>CARDAPIO</p>
+            <p>RECEITAS</p>
+            <p>CONTATOS</p>
+            <img src="{{ url_for('static', filename='imgs/PESSOA.png') }}"/>
+        </nav>
+        <hr>
+    </header>
 
-     </footer>
+    <!-- AQUI fica a área que muda -->
+    {% block conteudo %}
+    {% endblock %}
+
+    <footer>
+        <div>
+            <p>Inicio</p>
+            <p> Sobre nós </p>
+            <p>Ajuda</p>
+            <p>© 2025 Nutrif.</p>
+            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
+        </div>
+    </footer>
+
 </body>
 </html>

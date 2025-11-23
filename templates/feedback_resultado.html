@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<main>
+    <h2>Feedback Recebido</h2>
+
+    <p><strong>Sua mensagem:</strong></p>
+    <p>{{ mensagem }}</p>
+
+    <h3>Palavras encontradas:</h3>
+
+    <ul>
+        {% for p in palavras %}
+            <li>{{ p }}</li>
+        {% endfor %}
+    </ul>
+
+    <br><br>
+    <a href="/feedback">Enviar outro feedback</a>
+</main>
+{% endblock %}
