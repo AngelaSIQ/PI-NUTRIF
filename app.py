@@ -50,8 +50,12 @@ def prato():
 #contatos
 @app.route('/contatos')
 def contato():
-    return render_template('contatos.html')    
+    return render_template('contatos.html')   
 
+#restricao
+@app.route('/restricao')
+def contato():
+    return render_template('restricao.html')  
 
 if __name__ == "__main__":    
     app.run()

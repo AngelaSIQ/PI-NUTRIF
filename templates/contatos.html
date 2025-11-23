@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+
+    <header>
+        <nav class="nav-header">
+            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+
+        <h1>CONTATOS</h1>
+
+        <div class="card-contato">
+            <img src="{{ url_for('static', filename='imgs/nutricionista.png') }}">
+
+            <div class="card-info">
+                <h2>Ana Paula Souza</h2>
+                <p>E-mail: aaaaaaaa@escolar.ifrn.edu.br</p>
+                <p>Celular: (84) 99878-5634</p>
+            </div>
+        </div>
+
+        <div class="card-contato">
+            <img src="{{ url_for('static', filename='imgs/nutricionista.png') }}">
+
+            <div class="card-info">
+                <h2>Ana Paula Souza</h2>
+                <p>E-mail: aaaaaaaa@escolar.ifrn.edu.br</p>
+                <p>Celular: (84) 99878-5634</p>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="imagem-inferior">
+        <img src="{{ url_for('static', filename='imgs/salada.png') }}">
+    </div>
+
+    <footer>
+        <div>
+            <p>Inicio</p>
+            <p>Sobre nós</p>
+            <p>Ajuda</p>
+            <p>© 2025 Nutrif.</p>
+
+            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
+        </div>
+    </footer>
+
+</body>
+</html>

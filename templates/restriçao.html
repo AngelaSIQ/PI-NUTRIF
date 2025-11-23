@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restrição Alimentar</title>   
+</head>
+<body>
+
+    <header>
+        <nav class="nav-header">
+            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <h1>Restrição Alimentar</h1>
+
+        <form action="" method="POST" enctype="multipart/form-data">
+
+            <label for="restricao">Selecione seu tipo de restrição:</label><br>
+            <textarea id="restricao" name="restricao" placeholder="Descreva aqui..."></textarea>
+
+            <br><br>
+
+            <label for="arquivo"> Anexe seu laudo de restrição:</label><br>
+            <input type="file" id="arquivo" name="arquivo">
+
+            <br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <div class="imagem-central">
+        <img src="{{ url_for('static', filename='imgs/salada.png') }}">
+    </div>
+
+    <footer>
+        <div>
+            <p>Inicio</p>
+            <p>Sobre nós</p>
+            <p>Ajuda</p>
+            <p>© 2025 Nutrif.</p>
+            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+ 
