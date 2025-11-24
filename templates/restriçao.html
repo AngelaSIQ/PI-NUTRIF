@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restrição Alimentar</title>   
-</head>
-<body>
+{%extends "base.html"%}
 
-    <header>
-        <nav class="nav-header">
-            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
-        </nav>
-        <hr>
-    </header>
+{%block conteudo%}
 
     <main>
         <h1>Restrição Alimentar</h1>
@@ -33,21 +21,7 @@
         </form>
     </main>
 
-    <div class="imagem-central">
-        <img src="{{ url_for('static', filename='imgs/salada.png') }}">
-    </div>
+{%endblock%}
 
-    <footer>
-        <div>
-            <p>Inicio</p>
-            <p>Sobre nós</p>
-            <p>Ajuda</p>
-            <p>© 2025 Nutrif.</p>
-            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
-        </div>
-    </footer>
-
-</body>
-</html>
 
  
