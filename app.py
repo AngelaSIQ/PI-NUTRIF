@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import json
 
 app = Flask(__name__)
 
@@ -54,7 +55,7 @@ def contato():
 
 #restricao
 @app.route('/restricao')
-def contato():
+def restricao():
     return render_template('restricao.html')  
 
 if __name__ == "__main__":    
