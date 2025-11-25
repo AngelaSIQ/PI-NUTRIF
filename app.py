@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-import json
 
 app = Flask(__name__)
 
@@ -24,21 +23,22 @@ def cardapio():
     return render_template('cardapio.html')
 
 #feedback
-@app.route("/feedback", methods=["GET", "POST"])
+@app.route("/feedback", methods=['POST'])
 def feedback():
-    if request.method == "POST":
-        msg = request.form["mensagem"]
-        palavras = msg.split()
+    msg = request.form['obrigada']
+    feedbacks_lista.append(msg)
+    return
+    redirect(url_for("feedback_resultados"))
+   
 
-        return render_template(
-            "feedback_resultado.html",
-            mensagem=msg,
-            palavras=palavras
-        )
-
+@app.route("/feedback_form")
+def feedback_form():
     return render_template("feedback.html")
 
-
+@app.route("/feedback_resultados")
+def feddback_resultados():
+    render_template("feedback_resultados.html", feedbacks=feedbacks_lista)
+    
 #receitas
 @app.route('/receitas')
 def receitas():
@@ -55,9 +55,8 @@ def contato():
 
 #restricao
 @app.route('/restricao')
-def restricao():
+def contato():
     return render_template('restricao.html')  
 
 if __name__ == "__main__":    
     app.run()
-
