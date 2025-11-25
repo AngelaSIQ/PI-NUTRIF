@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -23,22 +23,21 @@ def cardapio():
     return render_template('cardapio.html')
 
 #feedback
+feedbacks_lista = []
 @app.route("/feedback", methods=['POST'])
 def feedback():
-    msg = request.form['obrigada']
+    msg = request.form.get('obrigada')
     feedbacks_lista.append(msg)
-    return
-    redirect(url_for("feedback_resultados"))
-   
+    return redirect(url_for("feedback_resultados"))
 
 @app.route("/feedback_form")
 def feedback_form():
     return render_template("feedback.html")
 
 @app.route("/feedback_resultados")
-def feddback_resultados():
-    render_template("feedback_resultados.html", feedbacks=feedbacks_lista)
-    
+def feedback_resultados():  # ✔ NOME ARRUMADO
+    return render_template("feedback_resultados.html", feedbacks=feedbacks_lista)  # ✔ RETURN adicionado
+
 #receitas
 @app.route('/receitas')
 def receitas():
@@ -55,7 +54,7 @@ def contato():
 
 #restricao
 @app.route('/restricao')
-def contato():
+def restricao():   # ✔ sem acento
     return render_template('restricao.html')  
 
 if __name__ == "__main__":    
