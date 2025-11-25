@@ -2,18 +2,17 @@
 
 {% block conteudo %}
 <main>
-    <h2>Feedback Recebido</h2>
+    <h2>Feedbacks Recebidos</h2>
 
-    <p><strong>Sua mensagem:</strong></p>
-    <p>{{ mensagem }}</p>
-
-    <h3>Palavras encontradas:</h3>
-
-    <ul>
-        {% for p in palavras %}
-            <li>{{ p }}</li>
-        {% endfor %}
-    </ul>
+    {% if mensagem %}
+        <ul style="list-style: none;">
+            {% for p in mensagem %}
+                <li>{{ p }}</li>
+            {% endfor %}
+        </ul>
+    {%else%}
+        <h3 style="color:gray;">Nenhuma mensagem recebida</h3>
+    {% endif %}
 
     <br><br>
     <a href="/feedback">Enviar outro feedback</a>

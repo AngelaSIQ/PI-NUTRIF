@@ -26,7 +26,7 @@ def cardapio():
 feedbacks_lista = []
 @app.route("/feedback", methods=['POST'])
 def feedback():
-    msg = request.form.get('obrigada')
+    msg = request.form.get('mensagem')
     feedbacks_lista.append(msg)
     return redirect(url_for("feedback_resultados"))
 
@@ -36,7 +36,7 @@ def feedback_form():
 
 @app.route("/feedback_resultados")
 def feedback_resultados():  # ✔ NOME ARRUMADO
-    return render_template("feedback_resultados.html", feedbacks=feedbacks_lista)  # ✔ RETURN adicionado
+    return render_template("feedback_resultados.html", mensagem=feedbacks_lista)  # ✔ RETURN adicionado
 
 #receitas
 @app.route('/receitas')
