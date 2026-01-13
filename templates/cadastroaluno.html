@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <header>
+        <nav class="nav-header">
+            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
+        </nav>
+<hr>
+        <main>
+            <div> <h1>Cadastro/Aluno</h1></div>
+            <form action="" method="post">
+                <!-- Elementos do formulário vão aqui -->
+                <label for="Matricula">Matricula do SUAP::</label>
+                <input type="text" id="Matricula:" name="nome">
+
+
+                <label for="Senha">Senha do SUAP::</label>
+                <input type="text" id="Senha" name="nome">
+
+
+                 <label for="Nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome">
+
+
+                <div class="botoes-conteudo">
+                <button>Enviar</button>
+
+                <p>Você possui programa de alimentação?</p>
+                <input type="checkbox" name="opç1" value="sim"> 
+                <p>Você tem alguma restrição?</p>
+                <input type="checkbox" name="opç2" value="sim"> 
+
+                 <div class="botoes-conteudo">
+                <button>Enviar</button>
+
+                </div>
+
+        </main>
+
+    </header>
+    
+        <img src="{{ url_for('static', filename='imgs/salada.png') }}"/>
+
+     <footer>
+        <div>
+            <p>Inicio</p>
+            <p> Sobre nós </p>
+            <p>Ajuda</p>
+            <p>© 2025 Nutrif.</p>
+             <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -6,32 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+     <header>
         <nav class="nav-header">
             <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
         </nav>
-
 <hr>
         <main>
-            <div> <h1>Cadastro</h1></div>
+            <div> <h1>Cadastro/Servidor</h1></div>
             <form action="" method="post">
+                <!-- Elementos do formulário vão aqui -->
+                <label for="Matricula">Matricula do SUAP::</label>
+                <input type="text" id="Matricula:" name="nome">
 
-                <P>Sou aluno</P>
-                 <input type="checkbox" name="opç1" value="sim"> 
-                  <P>Sou servidor</P>
-                <input type="checkbox" name="opç2" value="sim"> 
-               
+
+                <label for="Senha">Senha do SUAP::</label>
+                <input type="text" id="Senha" name="nome">
+
+
+                 <label for="Nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome">
+
+
                 <div class="botoes-conteudo">
                 <button>Enviar</button>
 
+                
 
                 </div>
-        </main>
-        <img src="{{ url_for('static', filename='imgs/salada.png') }}"/>
 
+        </main>
 
     </header>
-    <footer>
+    
+        <img src="{{ url_for('static', filename='imgs/salada.png') }}"/>
+
+     <footer>
         <div>
             <p>Inicio</p>
             <p> Sobre nós </p>
@@ -43,4 +52,3 @@
 
 </body>
 </html>
-
