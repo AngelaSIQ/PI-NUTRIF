@@ -17,6 +17,22 @@ def login():
 def cadastro():
     return render_template('cadastro.html') 
 
+@app.route('/cadastroaluno')
+def cadastroaluno():
+    return render_template('cadastroaluno.html') 
+
+@app.route('/cadastroservidor')
+def cadastroservidor():
+    return render_template('cadastroservidor.html') 
+
+@app.route('/perfilservidor')
+def perfilservidor():
+    return render_template('perfilservidor.html') 
+
+@app.route('/perfilusuario')
+def perfilusuario():
+    return render_template('perfilusuario.html') 
+
 #cardápio   
 @app.route('/cardapio')
 def cardapio():
@@ -54,8 +70,10 @@ def contato():
 
 #restricao
 @app.route('/restricao')
-def restricao():   # ✔ sem acento
+def restricao():   
     return render_template('restricao.html')  
+
+
 
 if __name__ == "__main__":    
     app.run()
