@@ -7,8 +7,23 @@
     display: flex;
     flex-direction: row;
     border-color: solid 1px #53B160;
+    width: 100px;
+    height: 50px;
 }
 
-header{
-    
+.sessao-descricao{
+    display:flex;
+    flex-direction: row;
+
+}
+
+.descricao-projeto{
+    display:flex;
+    flex-direction:column
+}
+
+.descricao-projeto div p{
+    width: 200px;
+    heigth: 200px;
+    background: green
 }
