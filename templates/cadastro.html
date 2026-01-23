@@ -10,27 +10,20 @@
         <nav class="nav-header">
             <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
         </nav>
-
+    </header>    
 <hr>
-        <main>
-            <div> <h1>Cadastro</h1></div>
-            <form action="" method="post">
-
-                <P>Sou aluno</P>
-                 <input type="checkbox" name="opç1" value="sim"> 
-                  <P>Sou servidor</P>
-                <input type="checkbox" name="opç2" value="sim"> 
+    <main>
+        <h1>Cadastro</h1>
+        <form action="" method="post">
+            <label>sou aluno</label>
+            <input type="checkbox" name="opç1" value="sim"> 
+            <label>sou servidor</label>
+            <input type="checkbox" name="opç2" value="sim"> 
                
-                <div class="botoes-conteudo">
-                <button>Enviar</button>
+            <button type="submit">Enviar</button>
 
-
-                </div>
         </main>
-        <img src="{{ url_for('static', filename='imgs/salada.png') }}"/>
 
-
-    </header>
     <footer>
         <div>
             <p>Inicio</p>

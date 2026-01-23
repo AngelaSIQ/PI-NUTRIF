@@ -6,21 +6,22 @@ from flask_login import login_user, logout_user, login_required
 
 bp_usuarios = Blueprint('usuarios', __name__)
 
+@bp_usuarios.route('/cadastro', methods=['GET', 'POST'])
+def cadastro():
+    if request.method == 'GET':
+        return render_template('cadastro.html')
+    
+    usuario = Usuario(
+        nome = request.form['nome'],
+        senha = request.form['senha'],
+        email = request.form['email'],
+    )
 
-class Usuario(db.Model, UserMixin):
-    __tablename__ = "usuario"
-    id = db.Column(db.Integer, primary_key=True)
-    nome = db.Column(db.String(100))
-    email = db.Column(db.String(100))
-    senha = db.Column(db.String(100))
+    db.session.add(usuario)
+    db.session.commit()
 
-    def __init__(self, nome, email, senha):
-        self.nome = nome
-        self.email = email
-        self.senha = senha
-
-    def __repr__(self):
-        return "Usuario: {}".format(self.nome)
+    flash('Dados cadastrados com sucesso')
+    return redirect('/login')
 
 
 @bp_usuarios.route('/delete/<int:id>', methods=['GET', 'POST'])

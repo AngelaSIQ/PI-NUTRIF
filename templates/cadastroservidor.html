@@ -6,39 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-     <header>
+    <header>
         <nav class="nav-h eader">
             <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
         </nav>
+    </header>    
 <hr>
-        <main>
-            <div> <h1>Cadastro/Servidor</h1></div>
-            <form action="" method="post">
-                <!-- Elementos do formulário vão aqui -->
-                <label for="Matricula">Matricula do SUAP::</label>
-                <input type="text" id="Matricula:" name="nome">
+    <main>
+        <h1>Cadastro/Servidor</h1>
+        <form action="/cadastro" method="post">
+            <!-- Elementos do formulário vão aqui -->
+            <label for="Matricula">Matricula do SUAP::</label>
+            <input type="text" id="Matricula:" name="Matricula">
 
 
-                <label for="Senha">Senha do SUAP::</label>
-                <input type="text" id="Senha" name="nome">
+            <label for="Senha">Senha do SUAP::</label>
+            <input type="text" id="Senha" name="Senha">
 
 
-                 <label for="Nome">Nome completo:</label>
-                <input type="text" id="nome" name="nome">
+            <label for="Nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome">
 
 
-                <div class="botoes-conteudo">
-                <button>Enviar</button>
-
-                
-
-                </div>
-
-        </main>
-
-    </header>
-    
-        <img src="{{ url_for('static', filename='imgs/salada.png') }}"/>
+            <div class="botoes-conteudo">
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
 
      <footer>
         <div>

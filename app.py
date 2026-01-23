@@ -1,6 +1,26 @@
 from flask import Flask, render_template, request, redirect, url_for
+import json
+from flask import flash, redirect
+from utils import db
+import os
+from flask_migrate import Migrate
+from models import Usuario
+
 
 app = Flask(__name__)
+db_host = os.getenv('DB_HOST')
+db_port = os.getenv('DB_PORT')
+db_usuario = os.getenv('DB_USERNAME')
+db_senha = os.getenv('DB_PASSWORD')
+db_mydb = os.getenv('DB_DATABASE')
+
+conexao = f"mysql+pymysql://{db_usuario}:{db_senha}@{db_host}:{db_port}/{db_mydb}"
+app.config['SQLALCHEMY_DATABASE_URI'] = conexao
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db.init_app(app)
+migrate = Migrate(app, db)
+
 
 #pagina inicial
 @app.route('/')
@@ -12,10 +32,10 @@ def index():
 def login():
     return render_template('login.html')   
 
-#cadastro
-@app.route('/cadastro')
-def cadastro():
-    return render_template('cadastro.html') 
+# #cadastro
+# @app.route('/cadastro')
+# def cadastro():
+#     return render_template('cadastro.html') 
 
 @app.route('/cadastroaluno')
 def cadastroaluno():
