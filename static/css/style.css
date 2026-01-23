@@ -121,6 +121,7 @@ header{
     gap: 10px;
 }
 
+<<<<<<< HEAD
 .conteudo-central-rodapé a {
     display: flex;
     align-items: center;  
@@ -171,3 +172,28 @@ footer img {
         gap: 20px;
     }
     }
+=======
+<<<<<<< HEAD
+.sessao-descricao{
+    display:flex;
+    flex-direction: row;
+
+}
+
+.descricao-projeto{
+    display:flex;
+    flex-direction:column
+}
+
+.descricao-projeto div p{
+    width: 200px;
+    height: 200px;
+    background: green;
+    
+}
+=======
+header{
+    
+}
+>>>>>>> 9229e69b92ae47bb7a70ff259ea5d7e34d6b0168
+>>>>>>> 9fce11e0eba3dc87ed737e1d8bae4f12e1a79bed
