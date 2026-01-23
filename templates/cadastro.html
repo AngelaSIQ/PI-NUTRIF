@@ -3,44 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cadastro</title>
 </head>
 <body>
-    <header>
-        <nav class="nav-header">
-            <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
-        </nav>
+    
+    {%extends "base2.html"%}
 
-<hr>
+    {%block conteudo%}  
+
         <main>
-            <div> <h1>Cadastro</h1></div>
-            <form action="" method="post">
+            <div>
+                <h1>Cadastro</h1>
+                <form action="" method="post">
+                    <label>Sou aluno</label>
+                    <input type="checkbox" name="opç1" value="sim"> 
+                    <label>Sou servidor</label>
+                    <input type="checkbox" name="opç2" value="sim"> 
+                    <button>Enviar</button>
+                </form>
+            </div>
 
-                <P>Sou aluno</P>
-                 <input type="checkbox" name="opç1" value="sim"> 
-                  <P>Sou servidor</P>
-                <input type="checkbox" name="opç2" value="sim"> 
-               
-                <div class="botoes-conteudo">
-                <button>Enviar</button>
-
-
-                </div>
         </main>
-        <img src="{{ url_for('static', filename='imgs/salada.png') }}"/>
 
-
-    </header>
-    <footer>
-        <div>
-            <p>Inicio</p>
-            <p> Sobre nós </p>
-            <p>Ajuda</p>
-            <p>© 2025 Nutrif.</p>
-             <img src="{{ url_for('static', filename='imgs/logo.jpg') }}"/>
-        </div>
-    </footer>
-
+    {%endblock%}
 </body>
-</html>
+</html>        
+
 

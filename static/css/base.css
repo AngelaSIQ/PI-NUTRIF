@@ -2,3 +2,7 @@ header nav{
     display:flex;
     flex-direction: row;
 }
+
+footer{
+    background:34684A;
+}
