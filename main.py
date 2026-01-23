@@ -16,3 +16,9 @@ class Usuario(db.Model, UserMixin):
   def __repr__(self):
     return "Usuario: {}".format(self.nome)
 
+@app.errorhandler(401)
+def acesso_negado(e):
+    return render_template('acesso_negado.html'), 404
+
+
+@app.run(host='0.0.0.0', port=81)
