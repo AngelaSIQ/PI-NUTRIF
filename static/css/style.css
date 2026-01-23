@@ -1,16 +1,124 @@
-.nav-header{
-    display: flex;
-    flex-direction: row;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.botoes-header{
+/* BODY */
+body {
+    background-color: #ffffff;
+    color: #1f3d2b;
+}
+
+/* ================= HEADER ================= */
+.nav-header {
+    background-color: #2f6f4e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.nav-header img {
+    height: 65px;
+    border-radius: 20px;
+}
+
+/* BOTÕES HEADER */
+.botoes-header {
+    display: flex;
+    gap: 15px;
+}
+
+.botoes-header div a {
+    background-color: #ffffff;
+    color: #2f6f4e;
+    padding: 6px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.botoes-header div a:hover {
+    background-color: #e6f3ec;
+}
+
+/* ================= MAIN ================= */
+main {
+    width: 100%;
+}
+
+/* ---------- HERO SECTION ---------- */
+main section:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    gap: 40px;
+}
+
+/* TEXTO */
+main section:first-child > div {
+    background-color: #b9e3c1;
+    padding: 40px;
+    border-radius: 25px;
+    width: 45%;
+}
+
+main section:first-child p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* BOTÕES HERO */
+main section:first-child > div > div:last-child {
+    display: flex;
+    gap: 15px;
+}
+
+main section:first-child a {
+    background-color: #2f6f4e;
+    color: #ffffff;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+main section:first-child a:hover {
+    background-color: #24563c;
+}
+
+
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #2f6f4e;
+    color: #ffffff;
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteudo-central-rodapé {
+    align-items: center;  
+    display: grid;
+    gap: 10px;
+}
+
+.conteudo-central-rodapé div {
     display: flex;
     flex-direction: row;
     border-color: solid 1px #53B160;
-    width: 100px;
-    height: 50px;
 }
 
+<<<<<<< HEAD
 .sessao-descricao{
     display:flex;
     flex-direction: row;
@@ -28,3 +136,8 @@
     background: green;
     
 }
+=======
+header{
+    
+}
+>>>>>>> 9229e69b92ae47bb7a70ff259ea5d7e34d6b0168
