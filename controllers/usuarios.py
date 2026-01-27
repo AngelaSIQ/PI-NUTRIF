@@ -68,3 +68,4 @@ def logoff():
 def recovery():
     usuarios = Usuario.query.all()
     return render_template('usuarios/usuarios_recovery.html', usuarios=usuarios)
+
