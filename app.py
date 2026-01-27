@@ -6,10 +6,10 @@ import os
 from flask_migrate import Migrate
 from models import Usuario
 
-
 app = Flask(__name__)
+
 db_host = os.getenv('DB_HOST')
-db_port = os.getenv('DB_PORT')
+db_port = int(os.getenv('DB_PORT', 3306))
 db_usuario = os.getenv('DB_USERNAME')
 db_senha = os.getenv('DB_PASSWORD')
 db_mydb = os.getenv('DB_DATABASE')
@@ -21,7 +21,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
 
-#bgbgbgvb
 #pagina inicial
 @app.route('/')
 def index():

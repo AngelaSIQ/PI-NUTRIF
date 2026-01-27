@@ -35,11 +35,16 @@ def delete(id):
         db.session.commit()
         return 'Dados excluídos com sucesso'
 
-
-@login_manager.user_loader
+   #novo
+    @lm.user_loader
 def load_user(id):
-    usuario = Usuario.query.filter_by(id=id).first()
-    return usuario
+    return Usuario.query.get(int(id))
+
+#removido
+#@login_manager.user_loader
+#def load_user(id):
+    #usuario = Usuario.query.filter_by(id=id).first()
+    #return usuario
 
 
 @bp_usuarios.route('/autenticar', methods=['POST'])
