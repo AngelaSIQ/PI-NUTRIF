@@ -9,7 +9,7 @@
 <main>
 
     <h1>Perfil do usuario</h1>
-    <div>
+    <div class="sessao">
       <img src="{{url_for('static', filename='imgs/PESSOA.png')}}"/>
       #por na rota para acessar o nome,matricula e auxilio de cada usuario diferentes
       <p>{{nome do usuario}}</p>
@@ -17,12 +17,40 @@
       <p>cadastrado em auxilio? {{SIM}}</p>
     </div>
 
-    <div>
-      <h2>restrições/h2>
+    <div class="sessao">
+      <div class="cabecalho-restricao">
+         <h2>restrições</h2>
+         <buton>registrar restrição</buton>
+      </div>
+      
+      <p>possuo: {{intolerancia a gluten}}</p>
     </div>
    
-    <div>
+    <div class="sessao">
       <h2>feedbacks</h2>
+      <div>
+         <div class="estrelas">
+            <input type="radio" id="estrela5" name="avaliação" value="5"> <label for="estrela">*</label>
+            <input type="radio" id="estrela4" name="avaliação" value="4"> <label for="estrela">*</label>
+            <input type="radio" id="estrela3" name="avaliação" value="3"> <label for="estrela">*</label>
+            <input type="radio" id="estrela2" name="avaliação" value="2"> <label for="estrela">*</label>
+            <input type="radio" id="estrela1" name="avaliação" value="1"> <label for="estrela">*</label>
+         </div>
+         <img src="{{url_for('static', filename='imgs/PESSOA.png')}}"/>
+         <p>{{FEEDBACK}}</p>
+      </div>
+
+      <div>
+         <div class="estrelas">
+            <input type="radio" id="estrela5" name="avaliação" value="5"> <label for="estrela">*</label>
+            <input type="radio" id="estrela4" name="avaliação" value="4"> <label for="estrela">*</label>
+            <input type="radio" id="estrela3" name="avaliação" value="3"> <label for="estrela">*</label>
+            <input type="radio" id="estrela2" name="avaliação" value="2"> <label for="estrela">*</label>
+            <input type="radio" id="estrela1" name="avaliação" value="1"> <label for="estrela">*</label>
+         </div>
+         <img src="{{url_for('static', filename='imgs/PESSOA.png')}}"/>
+         <p>{{FEEDBACK}}</p>
+      </div>
     </div>
 
 </main>

@@ -1,0 +1,33 @@
+.sessao{
+    width: 200px;
+    height: 100px;
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.estrelas{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.estrelas input{
+    display:none;
+}
+
+.estrelas label{
+    font-size: 30px;
+    color: #ccc;
+    cursor:pointer;
+    transition:color 0.2s;
+}
+
+.estrelas label:before{
+    content:"★";
+}
+
+.estrelas input:hover ~ label, 
+.estrelas input:hover ~ label ~ label {
+    color:#ffcc00;
+}
