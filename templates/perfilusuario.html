@@ -1,23 +1,29 @@
 {%extends "base.html"%}
 
+{%block extra_css%}
+   <link href="{{url_for('static', filename='css/perfilusuario.css')}}" rel="stylesheet">
+{%endblock%}
+
 {%block conteudo%}
 
 <main>
 
-    <h2>Perfil do usuario</h2>
-    <img src="{{url_for('static', filename='imgs/PESSOA.png')}}"/>
-    <p>Maria pereira</p>
-    <p>matricula: 20231041110029</p>
-    <p>cadastrado em auxilio? SIM</p>
-    <H2>restrições</H2>
-       <img src="{{url_for('static', filename='imgs/atenção.png')}}"/>
-    <p>você não possui restrições</p>
+    <h1>Perfil do usuario</h1>
+    <div>
+      <img src="{{url_for('static', filename='imgs/PESSOA.png')}}"/>
+      #por na rota para acessar o nome,matricula e auxilio de cada usuario diferentes
+      <p>{{nome do usuario}}</p>
+      <p>matricula: {{20231041110029}}</p>
+      <p>cadastrado em auxilio? {{SIM}}</p>
+    </div>
 
-    <H2>Feedbacks</H2>
-       <img src="{{url_for('static', filename='imgs/atenção.png')}}"/>
-    <p>você não possui feedbacks</p>
-
-
+    <div>
+      <h2>restrições/h2>
+    </div>
+   
+    <div>
+      <h2>feedbacks</h2>
+    </div>
 
 </main>
 
